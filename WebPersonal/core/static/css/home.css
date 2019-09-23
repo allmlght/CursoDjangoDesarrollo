@@ -1,0 +1,244 @@
+.nav-social {
+    border-bottom: 1px groove rgba(255, 255, 255, 0.25);
+    height: 40px;
+}
+
+.navbar-nav>li {
+    padding: 6px 10px 0px 10px;
+}
+
+.navbar {
+    padding-left: 10%;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-nav {
+    padding-left: 10%;
+}
+
+.navbar {
+    background: transparent;
+    z-index: 1;
+}
+
+.dropdown {
+    border-radius: 0;
+    border: 0;
+}
+
+.dropdown-menu {
+    background: #dddddd;
+    border: 0;
+    top: 80%;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.dropdown-item:hover {
+    background: transparent;
+    color: #fff;
+}
+
+.dropdown-menu a {
+    color: #888;
+}
+
+.navbar .nav-item .nav-link {}
+
+.navbar .nav-item .nav-link:hover .navbar .nav-item .nav-link {
+    color: red !important;
+}
+
+.dropdown-toggle::after {
+    content: none
+}
+
+#carouselObras {
+    z-index: 0;
+    margin-top: -127px;
+}
+
+.logo-gc {
+    height: 100%;
+    width: 100%;
+    line-height: 60px;
+    font-size: 30px
+}
+
+.navbar-brand {
+    width: 19%;
+}
+
+.logo-gc>img {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.navbar-brand {
+    height: 70px;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+    margin-top: -9%;
+}
+
+.sm-menu {
+    border-top: 3px solid rgb(255, 182, 0);
+    border-radius: 3px;
+    background-color: white;
+    color: #888;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.nav-link {
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    height: 60px;
+    text-align: center
+}
+
+.widget-title>div.info {
+    width: 80%;
+    height: 2px;
+    margin-top: 4px;
+    background-color: #ffb600;
+    max-width: 90px;
+}
+
+.widget-title>div.sobre {
+    width: 80%;
+    height: 2px;
+    margin-top: 4px;
+    background-color: #ffb600;
+    max-width: 190px;
+}
+
+.nav-link.active>div {
+    width: 100%;
+    height: 2px;
+    margin-top: 2px;
+    background-color: #ffb600;
+}
+
+.footer {
+    background-color: #1b273d;
+    color: #dddddd;
+    font-family: 'SF Display'!important;
+    -webkit-box-shadow: inset 0px 7px 15px -5px rgba(0,0,0,0.78); 
+box-shadow: inset 0px 7px 15px -5px rgba(0,0,0,0.78);
+}
+
+.widget-title {
+    padding: 0px 20px 20px 20px;
+}
+
+.textwidget {
+    padding: 0px 20px 0px 20px;
+}
+
+.textwidget.d-none {
+    color: #fff;
+    font-size: 14px;
+}
+
+.textwidget.d-none>i {
+    margin-right: 4px;
+}
+
+.textwidget>p>i {
+    margin-right: 4px
+}
+
+@media (max-width:1200px) {
+    .carousel-item {
+        height: unset;
+    }
+}
+
+@media (max-width:575.98px) {
+    .carousel-item {
+        height: unset;
+    }
+    #carouselObras {
+        z-index: 0;
+        margin-top: unset;
+    }
+    .carousel-inner {
+        height: 240px;
+    }
+    .navbar-nav {
+        padding-left: unset;
+    }
+    .navbar-brand {
+        width: 100px;
+    }
+    .navbar.a {
+        background-color: #1b273d;
+    }
+    .navbar.b {
+        background-color: white;
+    }
+    .navbar {
+        padding: 8px 16px!important;
+    }
+}
+
+@media (max-width:768px) {
+    .navbar {
+        padding-left: 10%;
+    }
+    .navbar-nav {
+        padding-left: 4%;
+        zoom: 0.7;
+    }
+}
+
+@media (min-width:575.99px) {
+    #navbarTogglerDemo03 {
+        margin-bottom: -3%;
+    }
+    .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+        color: #fff;
+    }
+    .navbar-light .navbar-nav .nav-link{
+        color:#fff;
+    }
+    .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+        color:#fff;
+    }
+}
+
+@media (min-width:1200px) {
+    .navbar-nav {
+        padding-left: 20%;
+    }
+}
+
+@media(max-width:375px) {
+    .img-fluid {
+        width: 100%;
+        height: auto;
+        margin-top: unset;
+    }
+}
+@media(min-width:1321px) and (max-width:1485px){
+    .img-fluid{
+        margin-top:0%;
+    }
+}
