@@ -1,0 +1,114 @@
+{% extends 'core/base.html' %} {% block body %}
+<div class="col-sm-12">
+    <div class="formGc">
+        <form method="post" id="contacto" name="contacto" action="/mensajecontacto/" method="POST">
+            {% csrf_token %}
+            <h3 class="widget-title">Oficina<div class="info"></div>
+            </h3>
+            <div class="mensaje-contacto">
+                <p>Nam viverra scelerisque turpis id fermentum. Sed bibendum sit amet odio tempor veneatis. Quisque vel
+                    lectus sem. Nam viverra scelerisque turpis id fermentum. Sed bibendum sit amet odio tempor veneatis.
+                    Quisque vel lectus sem.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" name="txtName" class="form-control" placeholder="Tu Nombre" value="">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="email" name="txtEmail" class="form-control" placeholder="Tu email" value="">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="number" name="txtPhone" class="form-control" placeholder="Telefono" value="">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="text" name="txtSubject" class="form-control" placeholder="Asunto" value="">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <textarea name="txtMsg" class="form-control" placeholder="Tu Mensaje"
+                            style="width: 100%; height: 150px;"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="submit" name="btnSubmit" class="btnContact" value="Enviar mensaje">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="success_tic" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <a class="close" href="#" data-dismiss="modal">&times;</a>
+            <div class="page-body">
+                <div class="head">
+                    <h3 style="margin-top:5px;">Enviado con exito!</h3>
+                </div>
+                <h1 style="text-align:center;">
+                    <div class="checkmark-circle">
+                        <div class="background"></div>
+                        <div class="checkmark draw"></div>
+                    </div>
+                    <h1>
+            </div>
+        </div>
+    </div>
+
+</div><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#success_tic">Open Modal</button>
+{% endblock %}
+
+{% block scriptjs%}
+<script>
+    $("#contacto").validate({
+        rules: {
+            // simple rule, converted to {requi red:true}
+            txtName: "required",
+            // compound rule
+            txtEmail: {
+                required: true,
+                email: true
+            },
+            txtPhone: { required: true, maxlength: 9 },
+            txtSubject: "required",
+            txtMsg: "required"
+        },
+        submitHandler: function (event, form) {
+            console.log("handle");
+            var serializedData = $("#contacto").serialize();
+            console.log(serializedData);
+            $.ajax({
+                type: "POST",
+                url: "/mensajecontacto/",
+                data: serializedData,
+                dataType: "text",
+                success: function (data) {
+                    if(data=="exito"){
+                        $("#success_tic").modal('show');
+                    }
+                },
+                error: function (data) {
+                    alert('error handling here');
+                    console.log(data);
+                }
+            });
+            return false;
+        }
+    });
+    jQuery.extend(jQuery.validator.messages, {
+        required: "Este campo es requerido",
+        maxlength: "Porfavor no mas de {0} digitos",
+        email: "Introduce un email valido",
+    });
+</script>
+{% endblock %}
