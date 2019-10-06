@@ -30,17 +30,21 @@
     <link rel='stylesheet' id='kirki_google_fonts-css'
         href='//fonts.googleapis.com/css?family=Lato%3Aregular%2Citalic%2C300%2C700%7CMontserrat%3Aregular%2C700%3A400%26subset%3Dcyrillic%2Ccyrillic-ext%2Cdevanagari%2Cgreek%2Cgreek-ext%2Ckhmer%2Clatin%2Clatin-ext%2Cvietnamese&#038;ver=5.2.3'
         type='text/css' media='all' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    </a>
 </head>
 
 <body style="background-color:#1b273d">
     <nav class="navbar a navbar-expand-lg navbar-light  nav-social">
-        <div class="textwidget d-none d-sm-block"><i class="fa fa-phone"></i> (102) 6666 8888 &nbsp;&nbsp; &nbsp; &nbsp;
-            <i class="fa fa-clock"></i> Mon - Sat: 9:00 - 18:00 &nbsp;&nbsp; &nbsp; &nbsp; <i
-                class="fa fa-envelope"></i> info@thememove.com</div>
+        <div class="textwidget d-none d-sm-block"><i class="fa fa-phone"></i> +(569) 9050 6087 &nbsp;&nbsp; &nbsp;
+            &nbsp;
+            <i class="fa fa-clock"></i> Lun - Vie: 9:00 - 18:00 &nbsp;&nbsp; &nbsp; &nbsp; <i
+                class="fa fa-envelope"></i> constructora@ccgltda.cl</div>
     </nav>
     <nav id="nav" class="navbar b navbar-expand-sm   navbar-light">
 
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <div class="logo-gc">
                 <img src="{% static 'img/LOGO.jpg' %}" class="rounded float-left" alt="...">
             </div>
@@ -59,13 +63,20 @@
                 </li>
 
                 <li class="nav-item dropdown dmenu">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    <a class="nav-link dropdown-toggle" href="/proyectos/" id="navbardrop" data-toggle="dropdown">
                         PROYECTOS<div></div>
                     </a>
                     <div class="dropdown-menu sm-menu">
-                        <a class="dropdown-item" href="#">Link 1</a>
+                        <a class="dropdown-item" href="/proyectos/">Todos los proyectos</a>
+                        <a class="dropdown-item" href="/proyecto/">Locales Maos</a>
                         <a class="dropdown-item" href="#">Link 2</a>
                         <a class="dropdown-item" href="#">Link 3</a>
+                        <a class="dropdown-item" href="#">Link 4</a>
+                        <a class="dropdown-item" href="#">Link 5</a>
+                        <a class="dropdown-item" href="#">Link 6</a>
+                        <a class="dropdown-item" href="#">Link 7</a>
+                        <a class="dropdown-item" href="#">Link 8</a>
+
                     </div>
                 </li>
                 <li class="nav-item">
@@ -78,6 +89,60 @@
         </div>
     </nav>
     {% block body %}{% endblock %}
+
+    <div id="modal-express" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+
+            <form id="formExpress" method="post" name="contacto" action="/mensajecontacto/" method="POST">
+                {% csrf_token %}
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Presupuesto Express</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="txtName" class="form-control" placeholder="Nombre" value="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="txtSubject" class="form-control" placeholder="Dirección"
+                                    value="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="number" name="txtPhone" class="form-control" placeholder="Teléfono"
+                                    value="">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="email" name="txtEmail" class="form-control" placeholder="Mail" value="">
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <textarea type="text" name="txtMsg" class="form-control" placeholder="Detalle" value=""
+                                    rows="8"></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-warning">Solicitar</button>
+                    </div>
+            <input type="hidden" name="tipo"value="express"/>
+            </form>
+        </div>
+    </div>
+    </div>
     <footer class="footer" role="contentinfo" itemscope="itemscope">
         <div class="container">
             <div class="row">
@@ -86,8 +151,13 @@
                         <h3 class="widget-title">Sobre Nosotros<div class="sobre"></div>
                         </h3>
                         <div class="textwidget">
-                            <p>Structure works as international construction services company and is a leading builder
-                                in diverse and numerous market segments.</p>
+                            <p>Constructora Catalán – Gálvez Limitada, fue creada por dos profesionales en el área de la
+                                ingeniería y arquitectura. Dirigida y supervisada personalmente por estos.</p>
+                            <p>La empresa ofrece una solución completa a sus necesidades de construcción de obras
+                                civiles, remodelaciones comerciales, diseño y publicidad de proyectos adaptándose a lo
+                                solicitado por el cliente.</p>
+                            <p>Si busca seriedad, responsabilidad y cumplimiento de sus metas, en construcción y
+                                remodelación, somos su mejor opción.</p>
                         </div>
                     </aside>
                     <aside id="text-9" class="widget widget_text">
@@ -100,18 +170,40 @@
                         </h3>
 
                         <div class="textwidget">
-                            <p><i class="fa fa-map-marker"></i> 14 Tottenham Road, London, England.</p>
-                            <p><i class="fa fa-phone"></i> (102) 6666 8888</p>
-                            <p><i class="fa fa-envelope"></i> info@thememove.com</p>
-                            <p><i class="fa fa-fax"></i> (102) 8888 9999</p>
-                            <p><i class="fa fa-clock"></i> Mon - Sat: 9:00 - 18:00</p>
+                            <p><i class="fa fa-map-marker"></i> Fidel Oteiza 1941, Oficina 701, Providencia, Santiago.
+                            </p>
+                            <p><i class="fa fa-phone"></i> +(569) 9050 6087</p>
+                            <p><i class="fa fa-envelope"></i> constructora@ccgltda.cl</p>
+                            <p><i class="fa fa-clock"></i> Lun - Vie: 9:00 - 18:00</p>
                         </div>
                     </aside>
                 </div>
             </div>
         </div>
     </footer>
+    <a href="https://api.whatsapp.com/send?phone=56990506087" class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i></a>
+    <div class="button-express" data-toggle="modal" data-target="#modal-express">Presupuesto Express </div>
 
+    <div id="success_tic" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <a class="close" href="#" data-dismiss="modal">&times;</a>
+                <div class="page-body">
+                    <div class="head">
+                        <h3 style="margin-top:5px;">Enviado con exito!</h3>
+                    </div>
+                    <h1 style="text-align:center;">
+                        <div class="checkmark-circle">
+                            <div class="background"></div>
+                            <div class="checkmark draw"></div>
+                        </div>
+                        <h1>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Bootstrap core JavaScript -->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
@@ -128,6 +220,47 @@
             }, function () {
                 $(this).find('.sm-menu').first().stop(true, true).slideUp(105)
             });
+        });
+        $("#formExpress").validate({
+            rules: {
+                // simple rule, converted to {requi red:true}
+                txtName: "required",
+                // compound rule
+                txtEmail: {
+                    required: true,
+                    email: true
+                },
+                txtPhone: { required: true, maxlength: 9 },
+                txtSubject: "required",
+                txtMsg: "required"
+            },
+            submitHandler: function (event, form) {
+                console.log("handle");
+                var serializedData = $("#formExpress").serialize();
+                console.log(serializedData);
+                $.ajax({
+                    type: "POST",
+                    url: "/mensajecontacto/",
+                    data: serializedData,
+                    dataType: "text",
+                    success: function (data) {
+                        if (data == "exito") {
+                            $("#modal-express").modal('hide');
+                            $("#success_tic").modal('show');
+                        }
+                    },
+                    error: function (data) {
+                        alert('error handling here');
+                        console.log(data);
+                    }
+                });
+                return false;
+            }
+        });
+        jQuery.extend(jQuery.validator.messages, {
+            required: "Este campo es requerido",
+            maxlength: "Porfavor no mas de {0} digitos",
+            email: "Introduce un email valido",
         });
     </script>
     {% block scriptjs %}{% endblock %}

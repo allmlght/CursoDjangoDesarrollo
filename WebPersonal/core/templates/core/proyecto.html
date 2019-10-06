@@ -1,0 +1,99 @@
+{% extends 'core/base.html' %} {% load staticfiles %}
+{% block body %}
+<style>
+    .obrarousel {
+        background-color: #fff;
+        padding: 20px;
+        z-index: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .obrarousel>div {}
+
+    .widget-title.proyecto {
+        padding-top: 20px;
+    }
+
+    .proyecto-detail {
+        background-color: #f8f8f8;
+        padding: 20px;
+    }
+
+    .proyecto-detail>p>h3 {
+        font-weight: 600;
+
+    }
+
+    .widget-title>div.info {
+        width: 100%;
+        max-width: unset;
+    }.logo-gc>img{
+        max-width: 220px;
+    }
+</style>
+<div class="col-sm-12  obrarousel">
+    <div class="col-sm-9">
+        <div id="obrarousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#obrarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#obrarousel" data-slide-to="1" class=""></li>
+                <li data-target="#obrarousel" data-slide-to="2" class=""></li>
+                <li data-target="#obrarousel" data-slide-to="3" class=""></li>
+                <li data-target="#obrarousel" data-slide-to="4" class=""></li>
+                <li data-target="#obrarousel" data-slide-to="5" class=""></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="img-fluid" src="{% static 'img/maos/124.JPG' %}" alt="responsive image">
+                </div>
+                <div class="carousel-item">
+                    <img class="img-fluid" src="{% static 'img/maos/205.JPG' %}" alt="responsive image">
+                </div>
+                <div class="carousel-item">
+                    <img class="img-fluid" src="{% static 'img/maos/IMG_4769.JPG' %}" alt="responsive image">
+                </div>
+                <div class="carousel-item">
+                    <img class="img-fluid" src="{% static 'img/maos/IMG_4483.JPG' %}" alt="responsive image">
+                </div>
+                <div class="carousel-item">
+                    <img class="img-fluid" src="{% static 'img/maos/207.JPG' %}" alt="responsive image">
+                </div>
+                <div class="carousel-item">
+                    <img class="img-fluid" src="{% static 'img/maos/206.JPG' %}" alt="responsive image">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#obrarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#obrarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h3 class="widget-title proyecto">Maos<div class="info"></div>
+        </h3>
+        <div class="proyecto-detail">
+            <p>
+                <h6>Mandante:</h6>
+            </p>
+            <p>
+                <h6>Dirección:</h6>
+            </p>
+            <p>
+                <h6>Metros cuadrados:</h6>
+            </p>
+            <p>
+                <h6>Tiempo de ejecución obra:</h6> 6 meses
+            </p>
+            <p>
+                <h6>Año:</h6> 2018
+            </p>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
