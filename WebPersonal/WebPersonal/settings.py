@@ -25,8 +25,7 @@ SECRET_KEY = '759lssun9jo%*9&_75^g*k#(te9kz_t4ih_+qds^uxof18i8ih'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -120,7 +119,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-#Email Settings 
+#Email Settings
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True

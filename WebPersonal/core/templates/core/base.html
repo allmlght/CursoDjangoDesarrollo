@@ -3,12 +3,13 @@
 {% load staticfiles %}
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favico/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favico/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favico/favicon-16x16.png' %}">
     <title>Landing Page - Start Bootstrap Theme</title>
 
     <!-- Bootstrap core CSS -->
@@ -138,7 +139,7 @@
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-warning">Solicitar</button>
                     </div>
-            <input type="hidden" name="tipo"value="express"/>
+                    <input type="hidden" name="tipo" value="express" />
             </form>
         </div>
     </div>
@@ -220,6 +221,7 @@
             }, function () {
                 $(this).find('.sm-menu').first().stop(true, true).slideUp(105)
             });
+            $('body').css("opacity","1")
         });
         $("#formExpress").validate({
             rules: {

@@ -1,4 +1,13 @@
 #formExpress>div>div.modal-body{display:flex;flex-wrap:wrap;}
+body{
+    transition: all 0.1s;
+    opacity: 0;
+}
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(255, 182, 0);
+}
 .btn-warning{
     color:white;
 }
