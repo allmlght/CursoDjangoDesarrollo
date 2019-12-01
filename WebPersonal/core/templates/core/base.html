@@ -38,7 +38,7 @@
 
 <body style="background-color:#1b273d">
     <nav class="navbar a navbar-expand-lg navbar-light  nav-social">
-        <div class="textwidget d-none d-sm-block"><i class="fa fa-phone"></i> +(569) 9050 6087 &nbsp;&nbsp; &nbsp;
+        <div class="textwidget d-none d-sm-block"><i class="fa fa-phone"></i> +(569) 9050 6087   &nbsp;&nbsp;&nbsp; +(569) 6208 8082&nbsp;&nbsp; &nbsp;
             &nbsp;
             <i class="fa fa-clock"></i> Lun - Vie: 9:00 - 18:00 &nbsp;&nbsp; &nbsp; &nbsp; <i
                 class="fa fa-envelope"></i> constructora@ccgltda.cl</div>
@@ -69,19 +69,16 @@
                     </a>
                     <div class="dropdown-menu sm-menu">
                         <a class="dropdown-item" href="/proyectos/">Todos los proyectos</a>
-                        <a class="dropdown-item" href="/proyecto/">Locales Maos</a>
-                        <a class="dropdown-item" href="#">Link 2</a>
-                        <a class="dropdown-item" href="#">Link 3</a>
-                        <a class="dropdown-item" href="#">Link 4</a>
-                        <a class="dropdown-item" href="#">Link 5</a>
-                        <a class="dropdown-item" href="#">Link 6</a>
-                        <a class="dropdown-item" href="#">Link 7</a>
-                        <a class="dropdown-item" href="#">Link 8</a>
-
+                        <a class="dropdown-item" href="/maos/">Locales Maos</a>
+                        <a class="dropdown-item" href="/auri/">Galeria Comercial Auri</a>
+                        <a class="dropdown-item" href="/casabuin/">Casas Buin</a>
+                        <a class="dropdown-item" href="/casalinas/">Casa Salinas</a>
+                        <a class="dropdown-item" href="/cabanas/">Cajón del Maipo Cabañas</a>
+                        <a class="dropdown-item" href="/cajon/">Cajón del Maipo Restaurant</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">SERVICIOS<div></div></a>
+                    <a class="nav-link" href="/servicios/">SERVICIOS<div></div></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/contact/">CONTACTO<div></div></a>
@@ -146,40 +143,7 @@
     </div>
     <footer class="footer" role="contentinfo" itemscope="itemscope">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <aside id="text-3" class="widget widget_text">
-                        <h3 class="widget-title">Sobre Nosotros<div class="sobre"></div>
-                        </h3>
-                        <div class="textwidget">
-                            <p>Constructora Catalán – Gálvez Limitada, fue creada por dos profesionales en el área de la
-                                ingeniería y arquitectura. Dirigida y supervisada personalmente por estos.</p>
-                            <p>La empresa ofrece una solución completa a sus necesidades de construcción de obras
-                                civiles, remodelaciones comerciales, diseño y publicidad de proyectos adaptándose a lo
-                                solicitado por el cliente.</p>
-                            <p>Si busca seriedad, responsabilidad y cumplimiento de sus metas, en construcción y
-                                remodelación, somos su mejor opción.</p>
-                        </div>
-                    </aside>
-                    <aside id="text-9" class="widget widget_text">
-                        <div class="textwidget"></div>
-                    </aside>
-                </div>
-                <div class="col-md-6">
-                    <aside id="text-4" class="widget widget_text">
-                        <h3 class="widget-title">Oficina<div class="info"></div>
-                        </h3>
-
-                        <div class="textwidget">
-                            <p><i class="fa fa-map-marker"></i> Fidel Oteiza 1941, Oficina 701, Providencia, Santiago.
-                            </p>
-                            <p><i class="fa fa-phone"></i> +(569) 9050 6087</p>
-                            <p><i class="fa fa-envelope"></i> constructora@ccgltda.cl</p>
-                            <p><i class="fa fa-clock"></i> Lun - Vie: 9:00 - 18:00</p>
-                        </div>
-                    </aside>
-                </div>
-            </div>
+          {% block footer %}{% endblock %}
         </div>
     </footer>
     <a href="https://api.whatsapp.com/send?phone=56990506087" class="float" target="_blank">
@@ -211,6 +175,7 @@
     <script src="{% static 'vendor/jquery/jquery.validate.js' %}"></script>
     <script>
         $(document).ready(function () {
+            
             var loc = window.location.pathname;
             console.log(loc);
             $('#nav').find('a').each(function () {

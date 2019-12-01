@@ -21,8 +21,20 @@ def proyectos(request):
     return render(request, "core/proyectos.html")
 
 
-def proyecto(request):
-    return render(request, "core/proyecto.html")
+def maos(request):
+    return render(request, "core/maos.html")
+def auri(request):
+    return render(request, "core/auri.html")
+def casabuin(request):
+    return render(request, "core/casabuin.html")
+def casalinas(request):
+    return render(request, "core/casalinas.html")
+def cabanas(request):
+    return render(request, "core/cabanas.html")
+def cajon(request):
+    return render(request, "core/cajon.html")
+def servicios(request):
+    return render(request, "core/servicios.html")
 
 
 def mensajecontacto(request):

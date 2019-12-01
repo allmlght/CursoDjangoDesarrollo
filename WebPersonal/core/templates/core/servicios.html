@@ -1,0 +1,129 @@
+{% extends 'core/base.html' %} {% load staticfiles %} {% block body %} 
+<style>
+   .logo-gc>img{
+       
+       width:70%;
+   }
+   .serv-items>div{
+   float: left;
+   }
+   .serv-items{
+       padding: 20px;
+       overflow: hidden;
+       background-color: #ffffff;
+   }
+   .img-fluid {
+    width: 100%;
+    height: auto;
+   margin-top: unset;
+}
+.bg-white.rounded.shadow-sm{
+min-height: 446px;
+
+}
+.img{
+    
+    width: 100%;
+    height: 290px;
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+</style>
+
+<div class="serv-items">
+    <div class="col-xl-4 col-lg-4 col-md-6 mb-4">
+        <div class="bg-white rounded shadow-sm">
+            <div class="img" style="background-image:url({% static 'img/servicio/Estudios.JPG' %})">
+
+            </div>
+          <div class="p-4">
+            <h5> <a href="#" class="text-dark">Estudios de Anteproyecto</a></h5>
+            <p class="small text-muted mb-0">Factibilidad técnica previa a la etapa del desarrollo de proyectos, donde evaluamos todos
+                    los aspectos legales y técnicos, generando modelos en 3D y presupuestos de costos,
+                    orientando a nuestros clientes a tomar la mejor decisión de sus ideas.</p>
+          </div>
+        </div>
+      </div>
+      <!-- End -->
+
+      <!-- Gallery item -->
+      <div class="col-xl-4 col-lg-4 col-md-6 mb-4">
+        <div class="bg-white rounded shadow-sm">
+                <div class="img" style="background-image:url({% static 'img/servicio/PA.jpg' %})">
+
+                </div>
+          <div class="p-4">
+            <h5> <a href="#" class="text-dark">Proyectos de Arquitectura</a></h5>
+            <p class="small text-muted mb-0">Desarrollo planimétrico y de antecedentes técnicos que permitan la obtención de permisos
+                    de obras y la posterior recepción final.</p>
+          
+          </div>
+        </div>
+      </div>
+      <!-- End -->
+
+      <!-- Gallery item -->
+      <div class="col-xl-4 col-lg-4 col-md-6 mb-4">
+        <div class="bg-white rounded shadow-sm">   <div class="img" style="background-image:url({% static 'img/servicio/PE.jpg' %})">
+
+        </div>
+          <div class="p-4">
+            <h5> <a href="#" class="text-dark">Proyectos de Estructuras y Cálculo.</a></h5>
+            <p class="small text-muted mb-0">Desarrollo planimétrico y de antecedentes técnicos necesarios para asegurar la correcta
+                    ejecución de la obra.</p>
+          
+          </div>
+        </div>
+      </div>
+      <!-- End -->
+
+      <!-- Gallery item -->
+      <div class="col-xl-4 col-lg-4 col-md-6 mb-4">
+        <div class="bg-white rounded shadow-sm">   <div class="img" style="background-image:url({% static 'img/servicio/PI.jpg' %})">
+
+        </div>
+          <div class="p-4">
+            <h5> <a href="#" class="text-dark">Proyectos de Instalaciones.</a></h5>
+            <p class="small text-muted mb-0">Desarrollo planimétrico y de antecedentes técnicos necesarios para asegurar la correcta
+                    ejecución de la obra en las áreas de agua potable, alcantarillado, electricidad, gas, aire
+                    acondicionado y climatización entre otras.</p>
+         
+          </div>
+        </div>
+      </div>
+      <!-- End -->
+
+      <!-- Gallery item -->
+      <div class="col-xl-4 col-lg-4 col-md-6 mb-4">
+        <div class="bg-white rounded shadow-sm">   <div class="img" style="background-image:url({% static 'img/servicio/OBRASC.jpg' %})">
+
+        </div>
+          <div class="p-4">
+            <h5> <a href="#" class="text-dark">Obras de Construcción.</a></h5>
+            <p class="small text-muted mb-0">Nuestra empresa ofrece una completa asesoría en al ámbito de la construcción con un
+                    alto estándar en los procesos de ejecución. Contamos con profesionales y especialistas,
+                    así como mano de obra idónea para un correcto desarrollo de la obra.</p>
+           
+          </div>
+        </div>
+      </div>
+      <!-- End -->
+
+      <!-- Gallery item -->
+      <div class="col-xl-4 col-lg-4 col-md-6 mb-4">
+        <div class="bg-white rounded shadow-sm">   <div class="img" style="background-image:url({% static 'img/servicio/OBRASM.jpg' %})">
+
+        </div>
+          <div class="p-4">
+            <h5> <a href="#" class="text-dark">Obras Menores y Remodelaciones.</a></h5>
+            <p class="small text-muted mb-0">Ejecutamos obras de construcción a menor escala, así como remodelaciones interiores,
+                    decoración y/o ampliaciones a costo plazo.</p>
+          
+          </div>
+        </div>
+      </div>
+      <!-- End -->
+    </div>
+
+{% endblock %}

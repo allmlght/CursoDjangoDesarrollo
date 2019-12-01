@@ -22,6 +22,12 @@ urlpatterns = [
     path('about/',core_views.about,name="about"),
     path('contact/',core_views.contact,name="contact"),
     path('proyectos/',core_views.proyectos,name="proyectos"),
-    path('proyecto/',core_views.proyecto,name="proyecto"),
+    path('maos/',core_views.maos,name="proyecto"),
+    path('auri/',core_views.auri,name="proyecto"),
+    path('casabuin/',core_views.casabuin,name="proyecto"),
+    path('casalinas/',core_views.casalinas,name="proyecto"),
+    path('cabanas/',core_views.cabanas,name="proyecto"),
+    path('cajon/',core_views.cajon,name="proyecto"),
+    path('servicios/',core_views.servicios,name="proyecto"),
     path('mensajecontacto/',core_views.mensajecontacto,name="about"),
 ]

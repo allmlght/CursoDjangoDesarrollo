@@ -1,0 +1,28 @@
+.obrarousel {
+    background-color: #fff;
+    padding: 20px;
+    z-index: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.obrarousel>div {}
+
+.widget-title.proyecto {
+    padding-top: 20px;
+}
+
+.proyecto-detail {
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+.proyecto-detail>p>h3 {
+    font-weight: 600;
+
+}
+
+.widget-title.proyecto>div.info {
+    width: 100%;
+    max-width: unset;
+}
