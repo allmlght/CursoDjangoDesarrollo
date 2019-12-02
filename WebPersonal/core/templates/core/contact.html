@@ -68,9 +68,7 @@
             txtMsg: "required"
         },
         submitHandler: function (event, form) {
-            console.log("handle");
             var serializedData = $("#contacto").serialize();
-            console.log(serializedData);
             $.ajax({
                 type: "POST",
                 url: "/mensajecontacto/",
@@ -83,7 +81,6 @@
                 },
                 error: function (data) {
                     alert('error handling here');
-                    console.log(data);
                 }
             });
             return false;

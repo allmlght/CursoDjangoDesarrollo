@@ -177,7 +177,6 @@
         $(document).ready(function () {
             
             var loc = window.location.pathname;
-            console.log(loc);
             $('#nav').find('a').each(function () {
                 $(this).toggleClass('active', $(this).attr('href') == loc);
             });
@@ -202,9 +201,7 @@
                 txtMsg: "required"
             },
             submitHandler: function (event, form) {
-                console.log("handle");
                 var serializedData = $("#formExpress").serialize();
-                console.log(serializedData);
                 $.ajax({
                     type: "POST",
                     url: "/mensajecontacto/",
@@ -218,7 +215,6 @@
                     },
                     error: function (data) {
                         alert('error handling here');
-                        console.log(data);
                     }
                 });
                 return false;
