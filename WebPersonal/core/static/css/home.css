@@ -461,6 +461,7 @@ form>h3 {
     }
     .navbar.a {
         background-color: #1b273d;
+        display:none;
     }
     .navbar.b {
         background-color: white;
@@ -471,6 +472,9 @@ form>h3 {
     .logo-gc>img {
         width: 100%;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    #nav{
+        margin-bottom: 0px;
     }
 }
 
