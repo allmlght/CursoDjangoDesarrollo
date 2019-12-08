@@ -38,7 +38,7 @@
 
 <body style="background-color:#1b273d">
     <nav class="navbar a navbar-expand-lg navbar-light  nav-social">
-        <div class="textwidget d-none d-sm-block"><i class="fa fa-phone"></i> +(569) 9050 6087   &nbsp;&nbsp;&nbsp; +(569) 6208 8082&nbsp;&nbsp; &nbsp;
+        <div class="textwidget d-none d-sm-block"><a class="a-tel" href="tel:569-9050-6087"><i class="fa fa-phone"></i> +(569) 9050 6087  </a> &nbsp;&nbsp;&nbsp;<a class="a-tel" href="tel:569-6208-8082"> +(569) 6208 8082</a>&nbsp;&nbsp; &nbsp;
             &nbsp;
             <i class="fa fa-clock"></i> Lun - Vie: 9:00 - 18:00 &nbsp;&nbsp; &nbsp; &nbsp; <i
                 class="fa fa-envelope"></i> constructora@ccgltda.cl</div>
@@ -143,7 +143,11 @@
     </div>
     <footer class="footer" role="contentinfo" itemscope="itemscope">
         <div class="container">
-          {% block footer %}{% endblock %}
+         
+          <div class="row">
+            {% block footer %}{% endblock %}
+           
+        </div>
         </div>
     </footer>
     <a href="https://api.whatsapp.com/send?phone=56990506087" class="float" target="_blank">

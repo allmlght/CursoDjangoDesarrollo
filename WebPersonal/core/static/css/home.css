@@ -1,3 +1,21 @@
+.a-tel:hover{
+    text-decoration: unset;
+    color: #dddddd;
+}
+.a-tel{
+    text-decoration: unset;
+    color: #fff;
+}
+.textwidget.p >p{
+ width: auto;
+ padding: 0px 2% 0px 0px;
+ display: inline-block;
+}
+
+
+.textwidget.p {
+zoom:0.9;
+   }
 #formExpress>div>div.modal-body{display:flex;flex-wrap:wrap;}
 body{
     transition: all 0.1s;

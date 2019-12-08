@@ -42,8 +42,6 @@ def mensajecontacto(request):
         if request.method == 'POST':
             # create a form instance and populate it with data from the request:
             form = contacto(data=request.POST)
-            print(form.is_valid())
-            print(form.data)
             # check whether it's valid:
             if form.is_valid():
                 # process the data in form.cleaned_data as required
